@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Zharif's Online Resume </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="fonts/webfontkit-20240107-111126/stylesheet.css">
+<link rel="stylesheet" href="fonts/webfontkit-20240107-144713/stylesheet.css">
+<link rel="stylesheet" href="fonts/webfontkit-20240107-150126/stylesheet.css">
+</head>
+
+<style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #000;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url("download.jpg");
+  min-height: 100%;
+}
+
+/* Second image (Experiences) */
+.bgimg-2 {
+  background-image: url("download\ \(1\).jpg");
+  min-height: 400px;
+}
+
+/* Third image (Education) */
+.bgimg-3 {
+  background-image: url("download\ \(1\).jpg");
+  min-height: 400px;
+}
+/* Fourth image (Goals) */
+.bgimg-4 {
+  background-image: url("download\ \(3\).jpg");
+  min-height: 400px;
+}
+/* Fifth image (Family) */
+.bgimg-5 {
+  background-image: url("download\ \(3\).jpg");
+  min-height: 400px;
+}
+/* Sixth image (Gallery) */
+.bgimg-6 {
+  background-image: url("download\ \(3\).jpg");
+  min-height: 400px;
+}
+/* Seventh image (Contact) */
+.bgimg-7 {
+  background-image: url("download\ \(3\).jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+
+body 
+  svg {
+    font-family: 'Russo One', sans-serif;
+    position: absolute; 
+    width: 100%; height: 100%;
+  }
+  svg text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #ffd000;
+    font-size: 75px;
+  }
+  @keyframes stroke {
+    0%   {
+      fill: rgba(72,138,20,0); stroke: #ffd000(255, 0, 0);
+      stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    70%  {fill: rgba(72,138,20,0); stroke: #ffd000(255, 0, 0); }
+    80%  {fill: rgba(72,138,20,0); stroke: #ffd000(255, 0, 0); stroke-width: 3; }
+    100% {
+      fill: rgb(0, 0, 0); stroke: rgba(54,95,160,0); 
+      stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+  }
+
+  .mySlides {display:none}
+  .w3-left, .w3-right, .w3-badge {cursor:pointer}
+  .w3-badge {height:13px;width:13px;padding:0}
+
+  #audio{
+    margin-left: 60%;
+    margin-top: -10%;
+  }
+
+</style>
+
+<body>
+
+    <script>
+        //Make a popup boc=x when opening the website using alert tag//
+        alert('welcome to Zharif Online Resume!!!');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+    <svg viewBox="0 0 1320 300">
+      <text x="50%" y="50%" dy=".25em" text-anchor="middle">
+        zharif's online resume!
+      </text>
+    </svg>  
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button"> HOME </a>
+    <a href="#biodata" class="w3-bar-item w3-button w3-hide-small"> BIODATA </a>
+    <a href="#experience" class="w3-bar-item w3-button w3-hide-small"> EXPERIENCE </a>
+    <a href="#education" class="w3-bar-item w3-button w3-hide-small"> EDUCATION </a>
+    <a href="#family" class="w3-bar-item w3-button w3-hide-small"> FAMILY </a>
+    <a href="#gallery" class="w3-bar-item w3-button w3-hide-small"> GALLERY </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"> CONTACT ME</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()"> HOME </a>
+    <a href="#biodata" class="w3-bar-item w3-button" onclick="toggleFunction()"> BIODATA </a>
+    <a href="#experience" class="w3-bar-item w3-button" onclick="toggleFunction()"> EXPERIENCE </a>
+    <a href="#education" class="w3-bar-item w3-button" onclick="toggleFunction()"> EDUCATION </a>
+    <a href="#family" class="w3-bar-item w3-button" onclick="toggleFunction()"> FAMILY </a>
+    <a href="#gallery" class="w3-bar-item w3-button" onclick="toggleFunction()"> GALLERY </a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()"> CONTACT ME </a>
+    <a href="#" class="w3-bar-item w3-button"> SEARCH </a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-bottommiddle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> ZHARIF'S <span class="w3-hide-small"> RESUME</span>
+  </div>
+</div>
+
+<!-- About Me Section -->
+<div class="w3-content w3-container w3-padding-64" id="about me">
+    <h1 class="w3-center" style="font-family: 'dream_orphansbold'; font: size 200px;"
+      > B I O D A T A </h1>
+      <ul>
+        <div class="text">
+              <p class="w3-center"> <span class="auto-type"></span> Welcome to my online resume ! </p>
+        </div> <!-- Added closing tag for the 'text' div -->
+      </ul>
+
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      
+      <script>
+          var typed = new Typed(".auto-type", {
+              strings: ["ٱلسَّلَامُ عَلَيْكُمْ,", "Ola!", "Bonjour!", "Como Estas!","Guano sekkito!"] ,
+              typeSpeed: 100,
+              backSpeed: 100,
+              loop: true
+    } )
+      </script>
+
+    <p style="text-align: justify;"> Hi readers! I am Muhammad Zharif Hanafi Bin Zulkifli, born on January 12, 2003, at Hospital Sultanah Nur Zahirah, Kuala Terengganu. At this moment, I am still into my studies as a 3rd-year diploma student at Universiti Teknologi Mara in Machang. The best part? i mostly finish my diploma by the time i am building this online resume! My journey so far has been ups and down of learning and growth with my friends, and i involve myself into academic and cocuricullum at Machang.</p>
+  
+    </p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <img src="attachment/zharif01.png" class="w3-round w3-image" alt="main photo" width="300" height="333">
+      </div>
+  <br>
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large" style="text-align: justify;">
+        <p> Besides, My true calling in life is sports, which I play competitively in football, futsal, and other games. It's also true that I pick things up quickly. Aside from that, I'm also interested in learning how to play an instrument, such as the guitar, and my favourite guitarist is Synyster Gates from Avenged Sevenfold Band, American band.  </p>
+      </div>
+  </div>
+  
+  <!-- Experiences-->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="experience">
+  
+      <div class="w3-quarter">
+      <br><hr>
+      <h1 class="w3-left-align" style ="font-family: 'dream_orphansbold'; font-size: x-large;"><br> E X P E R I E N C E </h1>
+      </div>
+      
+      <div class="w3-quarter">
+      <div class="w3-card w3-white">
+        <img src="attachment/svs.jpg" alt="" style="width: 90%;  margin-left: 10px;">
+        <div class="w3-container">
+        <h3>PART TIME WAITER AT SYRUP VS SODA</h3>
+        </div>
+        </div>
+      </div>
+      
+      <div class="w3-quarter">
+        <div class="w3-card w3-white">
+          <img src="attachment/kopimamu.jpg" alt="problem" style="width: 70.35%; margin-left: 33px;">
+          <div class="w3-container">
+          <h3>BARISTA AT KOPI MAMU STALL</h3>
+          </div>
+          </div>
+        </div>
+
+      <div class="w3-quarter">
+      <div class="w3-card w3-white">
+        <img src="attachment/elfbarrxz.jpg" alt="literacy" style="width: 90%; margin-left: 10px;">
+        <div class="w3-container">
+        <h3>PROMOTER AT RXZ MEMBER EVENT</h3>
+        </div>
+        </div>
+      </div>
+  </div>
+  
+  <div class="w3-container">
+      
+      <table class="w3-table-all">
+        <thead>
+          <tr class="w3-green">
+            <th>WORK</th>
+            <th>EXPERIENCE LEARNT</th>
+          </tr>
+        </thead>
+        <tr>
+          <td> SYRUP VS SODA </td>
+          <td>Able to work under pressure</td>
+        </tr>
+        <tr>
+          <td> KOPI MAMU </td>
+          <td>Able to manage time and self management</td>
+        </tr>
+        <tr>
+          <td> RXZ MEMBER </td>
+          <td>Able to work in crowded place</td>
+        </tr>
+        <tr>
+      </table>
+    </div>
+
+    <!-- Education -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="education"></div>
+<div class="w3-row w3-container" style="margin-top: -10%;">
+    <div class="w3-center w3-padding-64">
+      <h1 class="w3-center" style ="font-family: 'dream_orphansbold'; font: size 200px;"> E D U C A T I O N </h1>
+    </div>
+    <div class="w3-row-padding w3-margin-top">
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="attachment/skss2.png" style="width:100%; margin-left: 15px;">
+            <div class="w3-container">
+              <h5> SK Sultan Sulaiman II </h5>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="attachment/smkss.png" style="width:100%">
+            <div class="w3-container">
+              <h5> SMK Sultan Sulaiman </h5>
+            </div>
+          </div>
+        </div>
+      
+        <div class="w3-third">
+          <div class="w3-card">
+            <img src="attachment/uitm.png" style="width: 100%; margin-left: 25px;">
+            <div class="w3-container">
+              <h5> UiTM Machang, Kelantan </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+      
+    <!-- Family -->
+    <div class="w3-content w3-container w3-padding-64" id="family">
+        <h1 class="w3-center" style ="font-family: 'dream_orphansbold'; font: size 200px; margin-bottom: -8%;">F A M I L Y</h1>
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+        
+          <div class="w3-content w3-display-container" style="max-width:800px">
+            <img class="mySlides" src="attachment/family01.jpg" style="width:100%">
+            <img class="mySlides" src="attachment/family02.jpg" style="width:100%">
+            <img class="mySlides" src="attachment/family03.jpg" style="width:100%">
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+          </div>
+          
+          <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function currentDiv(n) {
+            showDivs(slideIndex = n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " w3-white";
+          }
+          var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+          </script>
+          <br>
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+          <div class="w3-quarter">
+            <img src="attachment/family08.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+          <div class="w3-quarter">
+            <img src="attachment/family09.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+          <div class="w3-quarter">
+            <img src="attachment/family06.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+          <div class="w3-quarter">
+            <img src="attachment/family07.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          </div>
+        </div>
+
+        <!-- Gallery -->
+<div class="w3-content w3-container w3-padding-64" id="gallery">
+    <h1 class="w3-center" style ="font-family: 'dream_orphansbold'; font: size 200px;"> G A L L E R Y</h1>
+    <p class="w3-center"><em>Take a look of my gallery!</em></p><br>
+  
+
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m3">
+        <img src="attachment/g1.jpg" style="width:100%;margin-right: 150px;height: fit-content;" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" >
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+    </div>
+  
+    <div class="w3-row-padding w3-center w3-section">
+      <div class="w3-col m3">
+        <img src="attachment/g5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+      <div class="w3-col m3">
+        <img src="attachment/g9.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g10.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="attachment/g13.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+    </div>
+      
+<!-- audio & video -->
+<div class="w3-content w3-container w3-padding-64" id="gallery">
+    <h1 class="w3-center" style="font-family: 'dream_orphansbold'; font-size: 30px;"> A U D I O & V I D E O</h1>
+    <p class="w3-center"><em>Take a look at my audio & video!</em></p><br>
+        
+        <div class="audio" style="margin-top: 20px;">
+            <audio controls muted style="width: 100%;">
+                <source src="audio/Avenged Sevenfold - Buried Alive [Official Lyrics Video] (128).mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+  <center>
+    <video controls autoplay muted src="audio/vid01.MOV" width="350" align="center">
+    </video>
+  </center>  
+</div>
+            
+  <!-- Contact-->
+
+<div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">MY CONTACT DETAILS</h3>
+    <p class="w3-center"><em>you can contact me for any inquiries!</em></p>
+  
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="attachment/g14.jpg" class="w3-image w3-round" style="width: 100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Kuala Terengganu, Terengganu<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +60 11 1101 6954<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: zharifthe11@gmail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section"> 
+      <a href="https://www.instagram.com/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+      <a href="https://twitter.com/home?lang=en"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    </div>
+    <p>&copy; 2024 Muhammad Zharif's Website. All rights reserved.</p>
+  
+  </footer>
+   
+  <script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+  }
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+  </script>
+  
+  </body>
+  </html>
